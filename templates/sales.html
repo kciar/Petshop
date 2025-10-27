@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Sales</h2>
+<form method="POST">
+    {{ form.hidden_tag() }}
+    <div>
+        {{ form.client.label }}<br>
+        {{ form.client() }}
+    </div>
+    <div>
+        {{ form.product.label }}<br>
+        {{ form.product() }}
+    </div>
+    <div>
+        {{ form.quantity.label }}<br>
+        {{ form.quantity(size=20) }}
+    </div>
+    <div>
+        {{ form.sale_date.label }}<br>
+        {{ form.sale_date(size=20) }}
+    </div>
+    <div>
+        {{ form.submit() }}
+    </div>
+</form>
+{% endblock %}
